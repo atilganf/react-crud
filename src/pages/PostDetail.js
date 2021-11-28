@@ -4,6 +4,7 @@ import { useParams } from 'react-router'
 import { Link } from "react-router-dom"
 
 function PostDetail() {
+    const json_url = "https://jsonplaceholder.typicode.com"
     const { id } = useParams()
     const [post, setPost] = useState(false)
     const [user, setUser] = useState("")
@@ -19,38 +20,28 @@ function PostDetail() {
     }, [])
 
     const getPost = async (id) => {
-        let post;
-        await axios.get(`https://jsonplaceholder.typicode.com/posts/${id}`)
-            .then(res => {
-                console.log("PostDetail post", res.data);
-                post = res.data;
-            }).catch(err => {
-                console.log(err)
-            })
+        let post = await axios.get(`${json_url}/posts/${id}`)
 
-        return post;
+        return post.data;
     }
 
     const getUser = async (id) => {
-        let user;
-        await axios.get(`https://jsonplaceholder.typicode.com/users/${id}`)
-            .then(res => {
-                console.log("PostDetail user", res.data);
-                user = res.data;
-            }).catch(err => {
-                console.log(err)
-            })
+        let user = await axios.get(`${json_url}/users/${id}`)
 
-        return user;
+        return user.data;
     }
 
     return (post ?
-        <div>
-            <h4>Post</h4>
-            {post.title}
-            {post.body}
-            <br/>
-            <Link to={`/profile/${user.id}`}> {user.username} </Link>
+        <div className="p-5">
+            <h2 className="text-capitalize">{post.title}</h2>
+            <br />
+            <Link className="link text-decoration-none fw-bold" to={`/profile/${user.id}`}>
+                <h4>{user.username}</h4>
+            </Link>
+            <br />
+
+            <p className="text-secondary">{post.body}</p>
+            <br />
         </div> : ""
     )
 }

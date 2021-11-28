@@ -1,0 +1,143 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;1,600&display=swap");
+$custom-blue: #5e72e4;
+$custom-green: #2dce89;
+$custom-red: #fb6340;
+$custom-dark: #32325d;
+$custom-secondary: #adb5bd;
+
+html,
+body {
+    font-family: "Open Sans", sans-serif !important;
+}
+
+.main-container {
+    margin-top: 180px;
+    min-height: 400px;
+}
+
+.transparent {
+    background: rgba(0, 0, 0, 0) !important;
+}
+
+.user-cont {
+    .user-city {
+        font-weight: 300;
+        font-size: 18px;
+    }
+}
+
+.posts-container,
+.footer-cont {
+    margin-top: 170px !important;
+    margin-bottom: 40px !important;
+}
+.btn:hover {
+    opacity: 0.8;
+    transition: 0.3s;
+}
+
+.footer-bottom {
+    font-size: 14px;
+    .text-secondary {
+        text-decoration: none;
+    }
+}
+
+.custom-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: -10;
+    min-width: 1300px;
+}
+.custom-green {
+    color: $custom-green;
+}
+.custom-dark {
+    color: $custom-dark;
+}
+.custom-blue {
+    color: $custom-blue !important;
+}
+.user-list-1 {
+    width: 30%;
+    .list-group-item {
+        color: $custom-secondary;
+        font-size: 16px;
+        font-weight: 400;
+    }
+}
+.user-list-2 {
+    width: 70%;
+    .list-group-item {
+        color: #525f7f;
+        font-size: 16px;
+    }
+}
+
+.user-post {
+    font-size: 16px;
+    color: $custom-dark;
+    text-align: center;
+    a{
+        font-size: 18px;
+    }
+}
+
+.text-primary {
+    color: $custom-blue !important;
+}
+
+.btn-primary {
+    background-color: $custom-blue !important;
+}
+
+.btn-danger {
+    background-color: $custom-red !important;
+}
+
+.btn-success {
+    background-color: $custom-green !important;
+}
+.btn-modal{
+    background-color: #11CDEF !important;
+    color: white !important;
+    font-size: 14px !important;
+    font-weight: bold;
+    
+}
+
+.btn-social {
+    width: 35px;
+    height: 35px;
+    border-radius: 5px;
+    display: block;
+    color: white;
+    text-align: center;
+    line-height: 35px;
+    margin-right: 10px;
+    transition: 0.3s;
+    bottom: 0;
+    position: relative;
+    &:hover {
+        bottom: 3px;
+        color: white;
+    }
+}
+
+.bg-facebook {
+    background: #3b5999;
+}
+
+.bg-twitter {
+    background: #1da1f2;
+}
+
+.bg-dribble {
+    background: #ea4c89;
+}
+
+.bg-github {
+    background: #222222;
+}
