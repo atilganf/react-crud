@@ -45,6 +45,7 @@ function ModalForm(props) {
             .catch(err => {
                 console.log(err)
             })
+        props.passNewPost(newPost, props.post.id)
     }
 
     return (
