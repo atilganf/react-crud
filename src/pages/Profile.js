@@ -34,10 +34,10 @@ function Profile() {
 
     return (user ?
         <div className="px-4 py-5">
-            <div className="d-flex flex-column flex-md-row mb-5 pb-4">
-                <div className="user-cont w-50">
+            <div className="d-flex user-cont flex-column flex-md-row mb-5 pb-4">
+                <div className="col-sm-6 col-12">
                     <h2 className="custom-dark">{user.name}</h2>
-                    <span className="user-city">{user.address.city}</span>
+                    <span>{user.address.city}</span>
                     <div className="d-flex mt-4">
                         <ul className="list-group user-list-1">
                             <li className="list-group-item px-0 border-0">Username</li>
@@ -57,7 +57,7 @@ function Profile() {
                         </ul>
                     </div>
                 </div>
-                <div className="w-50">
+                <div className="col-sm-6 col-12">
                     <GoogleMapComponent />
                 </div>
             </div>

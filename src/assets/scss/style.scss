@@ -10,44 +10,32 @@ body {
     font-family: "Open Sans", sans-serif !important;
     padding-right: 0 !important; // react-modal fix on responsive view
 }
-.custom-modal {
-    width: 100vw !important;
-    .custom-modal-dialog {
-        .custom-modal-content {
+
+// Homapage
+.custom-app-container {
+    width: 75%;
+    @media screen and (max-width: 750px) {
+        width: 90%;
+    }
+    .main-container {
+        margin-top: 180px;
+        min-height: 400px;
+        margin-bottom: 100px;
+        @media screen and (max-width: 750px) {
+            margin-top: 70px;
         }
     }
 }
 
-.main-container {
-    margin-top: 180px;
-    min-height: 400px;
-}
-
-.transparent {
-    background: rgba(0, 0, 0, 0) !important;
-}
-
-.user-cont {
-    .user-city {
-        font-weight: 300;
-        font-size: 18px;
-    }
-}
-
-.posts-container,
-.footer-cont {
-    margin-top: 170px !important;
-    margin-bottom: 40px !important;
-}
-.btn:hover {
-    opacity: 0.8;
-    transition: 0.3s;
-}
-
-.footer-bottom {
-    font-size: 14px;
-    .text-secondary {
-        text-decoration: none;
+// Header
+.custom-header-container {
+    @media screen and (max-width: 750px) {
+        img {
+            height: 30px;
+        }
+        .navbar-nav {
+            display: none;
+        }
     }
 }
 
@@ -66,38 +54,93 @@ body {
         object-fit: cover;
     }
 }
-.custom-green {
-    color: $custom-green;
-}
-.custom-dark {
-    color: $custom-dark;
-}
-.custom-blue {
-    color: $custom-blue !important;
-}
-.user-list-1 {
-    width: 30%;
-    .list-group-item {
-        color: $custom-secondary;
-        font-size: 16px;
-        font-weight: 400;
+
+// Profile Detail
+.user-cont {
+    .user-list-1 {
+        width: 30%;
+        .list-group-item {
+            color: $custom-secondary;
+            font-size: 16px;
+            font-weight: 400;
+        }
     }
-}
-.user-list-2 {
-    width: 70%;
-    .list-group-item {
-        color: #525f7f;
+    .user-list-2 {
+        width: 70%;
+        .list-group-item {
+            color: #525f7f;
+            font-size: 16px;
+        }
+    }
+    .user-post {
         font-size: 16px;
+        color: $custom-dark;
+        text-align: center;
+        a {
+            font-size: 18px;
+        }
     }
 }
 
-.user-post {
-    font-size: 16px;
-    color: $custom-dark;
-    text-align: center;
-    a {
-        font-size: 18px;
+// Modal Form - React Modal
+.custom-modal {
+    width: 100vw !important;
+    .btn-modal {
+        background-color: #11cdef !important;
+        color: white !important;
+        font-size: 14px !important;
+        font-weight: bold;
     }
+}
+
+// Footer
+.footer-cont {
+    .btn-social {
+        width: 35px;
+        height: 35px;
+        border-radius: 5px;
+        display: block;
+        color: white;
+        text-align: center;
+        line-height: 35px;
+        margin-right: 10px;
+        transition: 0.3s;
+        bottom: 0;
+        position: relative;
+        &:hover {
+            bottom: 3px;
+            color: white;
+        }
+    }
+
+    .footer-bottom {
+        font-size: 14px;
+        .text-secondary {
+            text-decoration: none;
+        }
+    }
+}
+
+// custom-colors and style fixes
+.btn:hover {
+    opacity: 0.8;
+    transition: 0.3s;
+}
+
+.transparent {
+    background: rgba(0, 0, 0, 0) !important;
+}
+
+.custom-green {
+    color: $custom-green;
+}
+
+.custom-dark {
+    color: $custom-dark;
+}
+
+.custom-blue {
+    color: $custom-blue !important;
 }
 
 .text-primary {
@@ -114,30 +157,6 @@ body {
 
 .btn-success {
     background-color: $custom-green !important;
-}
-.btn-modal {
-    background-color: #11cdef !important;
-    color: white !important;
-    font-size: 14px !important;
-    font-weight: bold;
-}
-
-.btn-social {
-    width: 35px;
-    height: 35px;
-    border-radius: 5px;
-    display: block;
-    color: white;
-    text-align: center;
-    line-height: 35px;
-    margin-right: 10px;
-    transition: 0.3s;
-    bottom: 0;
-    position: relative;
-    &:hover {
-        bottom: 3px;
-        color: white;
-    }
 }
 
 .bg-facebook {

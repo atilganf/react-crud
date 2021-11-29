@@ -5,39 +5,32 @@ body {
   padding-right: 0 !important;
 }
 
-.custom-modal {
-  width: 100vw !important;
+.custom-app-container {
+  width: 75%;
 }
-.main-container {
+@media screen and (max-width: 750px) {
+  .custom-app-container {
+    width: 90%;
+  }
+}
+.custom-app-container .main-container {
   margin-top: 180px;
   min-height: 400px;
+  margin-bottom: 100px;
+}
+@media screen and (max-width: 750px) {
+  .custom-app-container .main-container {
+    margin-top: 70px;
+  }
 }
 
-.transparent {
-  background: rgba(0, 0, 0, 0) !important;
-}
-
-.user-cont .user-city {
-  font-weight: 300;
-  font-size: 18px;
-}
-
-.posts-container,
-.footer-cont {
-  margin-top: 170px !important;
-  margin-bottom: 40px !important;
-}
-
-.btn:hover {
-  opacity: 0.8;
-  transition: 0.3s;
-}
-
-.footer-bottom {
-  font-size: 14px;
-}
-.footer-bottom .text-secondary {
-  text-decoration: none;
+@media screen and (max-width: 750px) {
+  .custom-header-container img {
+    height: 30px;
+  }
+  .custom-header-container .navbar-nav {
+    display: none;
+  }
 }
 
 .background-cont {
@@ -56,6 +49,73 @@ body {
   object-fit: cover;
 }
 
+.user-cont .user-list-1 {
+  width: 30%;
+}
+.user-cont .user-list-1 .list-group-item {
+  color: #adb5bd;
+  font-size: 16px;
+  font-weight: 400;
+}
+.user-cont .user-list-2 {
+  width: 70%;
+}
+.user-cont .user-list-2 .list-group-item {
+  color: #525f7f;
+  font-size: 16px;
+}
+.user-cont .user-post {
+  font-size: 16px;
+  color: #32325d;
+  text-align: center;
+}
+.user-cont .user-post a {
+  font-size: 18px;
+}
+
+.custom-modal {
+  width: 100vw !important;
+}
+.custom-modal .btn-modal {
+  background-color: #11cdef !important;
+  color: white !important;
+  font-size: 14px !important;
+  font-weight: bold;
+}
+
+.footer-cont .btn-social {
+  width: 35px;
+  height: 35px;
+  border-radius: 5px;
+  display: block;
+  color: white;
+  text-align: center;
+  line-height: 35px;
+  margin-right: 10px;
+  transition: 0.3s;
+  bottom: 0;
+  position: relative;
+}
+.footer-cont .btn-social:hover {
+  bottom: 3px;
+  color: white;
+}
+.footer-cont .footer-bottom {
+  font-size: 14px;
+}
+.footer-cont .footer-bottom .text-secondary {
+  text-decoration: none;
+}
+
+.btn:hover {
+  opacity: 0.8;
+  transition: 0.3s;
+}
+
+.transparent {
+  background: rgba(0, 0, 0, 0) !important;
+}
+
 .custom-green {
   color: #2dce89;
 }
@@ -66,32 +126,6 @@ body {
 
 .custom-blue {
   color: #5e72e4 !important;
-}
-
-.user-list-1 {
-  width: 30%;
-}
-.user-list-1 .list-group-item {
-  color: #adb5bd;
-  font-size: 16px;
-  font-weight: 400;
-}
-
-.user-list-2 {
-  width: 70%;
-}
-.user-list-2 .list-group-item {
-  color: #525f7f;
-  font-size: 16px;
-}
-
-.user-post {
-  font-size: 16px;
-  color: #32325d;
-  text-align: center;
-}
-.user-post a {
-  font-size: 18px;
 }
 
 .text-primary {
@@ -108,31 +142,6 @@ body {
 
 .btn-success {
   background-color: #2dce89 !important;
-}
-
-.btn-modal {
-  background-color: #11cdef !important;
-  color: white !important;
-  font-size: 14px !important;
-  font-weight: bold;
-}
-
-.btn-social {
-  width: 35px;
-  height: 35px;
-  border-radius: 5px;
-  display: block;
-  color: white;
-  text-align: center;
-  line-height: 35px;
-  margin-right: 10px;
-  transition: 0.3s;
-  bottom: 0;
-  position: relative;
-}
-.btn-social:hover {
-  bottom: 3px;
-  color: white;
 }
 
 .bg-facebook {

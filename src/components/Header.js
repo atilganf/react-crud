@@ -7,7 +7,7 @@ function Header() {
     return (
         <>
             <nav className="navbar navbar-light transparent mt-5">
-                <div className="container custom-container p-0">
+                <div className="container custom-header-container p-0">
                     <Link className="navbar-brand" to="/">
                         <img src={logo} alt="" height="40" />
                     </Link>

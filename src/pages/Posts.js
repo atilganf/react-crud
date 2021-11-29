@@ -72,13 +72,13 @@ function Posts() {
     return (
         <>
             <ModalForm show={show} handleShow={handleShow} post={editPost} passNewPost={changePost} />
-            <div className="row">
+            <div >
                 <div className="card border-0">
                     <ul className="list-group list-group-flush">
                         {posts.map((post, index) => {
                             if (index < 10) {
                                 return (
-                                    <li key={post.id} className="list-group-item post-cont d-flex flex-column flex-md-row justify-content-between py-4 px-0 mx-4 m-0">
+                                    <li key={post.id} className="list-group-item d-flex flex-column flex-md-row justify-content-between py-4 px-0 mx-4 m-0">
                                         <div className="d-flex flex-column flex-lg-row align-items-start align-items-lg-center text-secondary">
                                             <b className="ps-1 ps-lg-0">{post.id}</b>
                                             <p className="ps-1 ps-lg-3 py-0 my-0">{post.title}</p>

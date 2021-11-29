@@ -8,7 +8,7 @@ import Footer from '../components/Footer'
 
 function Homepage() {
     return (
-        <div className="w-75 m-auto">
+        <div className="m-auto custom-app-container">
             <BrowserRouter>
                 <Header />
                 <div className="container bg-white rounded shadow-lg main-container p-0">
