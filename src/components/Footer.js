@@ -8,12 +8,12 @@ import { Link } from 'react-router-dom'
 function Footer() {
     return (
         <div className="container px-0 footer-cont">
-            <div className="d-flex justify-content-between">
+            <div className="d-flex flex-column flex-sm-row justify-content-between">
                 <div>
                     <h4 className="custom-green pb-3">Thank you for supporting us!</h4>
                     <h5 className="custom-dark fw-light">Let's get in touch on any of these platforms.</h5>
                 </div>
-                <div className="d-flex">
+                <div className="d-flex mt-3">
                     <a className="btn-social bg-twitter" data-tip="Follow us" href="#" rel="noopener noreferrer">
                         <FontAwesomeIcon icon={faTwitter} />
                     </a>

@@ -8,6 +8,14 @@ $custom-secondary: #adb5bd;
 html,
 body {
     font-family: "Open Sans", sans-serif !important;
+    padding-right: 0 !important; // react-modal fix on responsive view
+}
+.custom-modal {
+    width: 100vw !important;
+    .custom-modal-dialog {
+        .custom-modal-content {
+        }
+    }
 }
 
 .main-container {
@@ -43,13 +51,20 @@ body {
     }
 }
 
-.custom-bg {
+.background-cont {
+    width: 100vh;
+    overflow: hidden;
+    position: relative;
+    height: 700px;
+    width: 100vw;
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
     z-index: -10;
-    min-width: 1300px;
+    .custom-bg {
+        height: 700px;
+        object-fit: cover;
+    }
 }
 .custom-green {
     color: $custom-green;
@@ -80,7 +95,7 @@ body {
     font-size: 16px;
     color: $custom-dark;
     text-align: center;
-    a{
+    a {
         font-size: 18px;
     }
 }
@@ -100,12 +115,11 @@ body {
 .btn-success {
     background-color: $custom-green !important;
 }
-.btn-modal{
-    background-color: #11CDEF !important;
+.btn-modal {
+    background-color: #11cdef !important;
     color: white !important;
     font-size: 14px !important;
     font-weight: bold;
-    
 }
 
 .btn-social {

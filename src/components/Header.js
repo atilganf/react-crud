@@ -21,7 +21,9 @@ function Header() {
                     </div>
                 </div>
             </nav>
-            <img className="custom-bg" src={background}></img>
+            <div className="background-cont">
+                <img className="custom-bg" src={background}></img>
+            </div>
         </>
     )
 }

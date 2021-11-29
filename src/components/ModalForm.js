@@ -50,7 +50,15 @@ function ModalForm(props) {
 
     return (
         <>
-            <Modal aria-labelledby="contained-modal-title-vcenter" centered show={props.show} onHide={handleClose}>
+            <Modal
+                className="custom-modal"
+                dialogClassName="custom-modal-dialog"
+                contentClassName="custom-modal-content"
+                aria-labelledby="contained-modal-title-vcenter"
+                centered
+                show={props.show}
+                onHide={handleClose}
+            >
                 <Modal.Header closeButton>
                     <Modal.Title className="fs-5">Düzenle</Modal.Title>
                 </Modal.Header>
